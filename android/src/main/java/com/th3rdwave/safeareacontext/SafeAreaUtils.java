@@ -63,7 +63,7 @@ import androidx.annotation.Nullable;
 
   static @Nullable com.th3rdwave.safeareacontext.Rect getFrame(ViewGroup rootView, View view) {
     // This can happen while the view gets unmounted.
-    if (view.getParent() == null) {
+    if (view == null || view.getParent() == null) {
       return null;
     }
     Rect offset = new Rect();
